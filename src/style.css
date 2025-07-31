@@ -57,5 +57,10 @@ confetti {
 }
 
 /* 4. Layout Containers */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
 
+/* 
 
