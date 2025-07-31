@@ -102,4 +102,20 @@ header {
     margin-right: auto;
 }
 
+/* 6. grid layout for cards */
+/* Responsive grid for cards */
+/* main layout for cards */
+/* mobile single column, tablet, desktop two columns */
+.app-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .app-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
