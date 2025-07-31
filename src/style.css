@@ -1,1 +1,8 @@
+/* style.css */
 
+/* CSS Reset & Variables */
+/* applys to all elements */
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
