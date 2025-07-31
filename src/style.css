@@ -1,8 +1,24 @@
 /* style.css */
 
-/* CSS Reset & Variables */
+/* 1. CSS Reset & Variables */
 /* applys to all elements */
+/* Removes default spacing browsers add */
+/* box-sizing:border-box; → Makes width & height include padding and border */
+
 * { margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --primary: #ff6b6b;
+    --secondary: #4ecdc4;
+    --accent: #ffbe0b;
+    --light: #f7f9f7;
+    --dark: #2d3436;
+    --success: #1dd1a1;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
