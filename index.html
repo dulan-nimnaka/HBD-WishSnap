@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Happy Birth Day WishSnap</title>
+        <title>Happy BirthDay WishSnap</title>
         <meta name="description" content="Happy Birthday WishSnap is a simple web application that allows users to create and share birthday wishes with friends and family.">
         <meta name="keyword" content="birthday card, greeting card, birthday wish, photo card, HBD ard">
         <meta name="author" content="Dulan Nimnaka">
@@ -21,7 +21,7 @@
             <header>
                 <div class="logo">
                     <div class="logo-icon">🎂</div>
-                    <div class="logo-text">Happy Birth Day WishSnap</div>
+                    <div class="logo-text">Happy BirthDay WishSnap</div>
 
                 </div>
                 <p class="tagline">Create personalised birthday cards with photos, messages, and share with loved ones!</p>
@@ -29,18 +29,70 @@
             </header>
 
             <!--Main Content App Grid-->
-            <main>
                 <div class="app-grid"></div>
 
                 <!--Form Section(Left side)-->
-                
+                <section class="form-section">
+                    <h2 class="section-title">Create Your Card</h2>
+                    <div class="form-group">
+                        <label for="name">Recipient's Name</label>
+                        <input type="text" id="name" placeholder="Enter the name of the birthday person" maxlength="30">
 
+                    </div>
 
-            </main>
+                    <div class="form-group">
+                        <label for="message">Birtday Message</label>
+                        <textarea id="message" placeholder="Write your heartfelt birthday message..." maxlength="200"></textarea>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="photo">Upload Photo (Optional)</label>
+                        <div class="file-upload">
+                            <div class="file-upload-btn">
+                                <span class="file-btn-text">Click to upload a photo</span>
+                                <input type="file" id="photo" accept="image/*">
+                            </div>
+                        </div>
+                        <img id="preview-image" class="preview-image" alt="Preview">
+                    </div>
+                    <button id="generate-btn" class="btn btn-generate">Generate Birthday Card</button>
 
+                </section>
 
+                <!--Preview Section (Right side)-->
+                <section class="preview-section">
+                    <div class="card-container">
+                        <div class="card-header">
+                            <h1 class="card-title">Happy Birthday!</h1>
+
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-image">
+                                <div class="card-image-placeholder">📷</div>
+                                <img id="card-photo" alt="birthdat photo">
+
+                            </div>
+                            <div class="card-message" id="card-message">
+                                Your personalized message will appear here
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            Made with ❤️ using HBD-WishSnap
+                        </div>
+                    </div>
+
+                    <div class="action-btns">
+                        <button id="download-btn" class="btn btn-download" disabled>Download Card as Image</button>
+                        <button id="share-btn" class="btn btn-share" disabled>Share on Social Media</button>
+
+                    </div>
+                </section>
+            </div>
         </div>
+
+        <!--Social Share Modal (Pop-Up Window)-->
+        
 
 
     </body>
