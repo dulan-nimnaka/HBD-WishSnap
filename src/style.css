@@ -33,7 +33,29 @@ body {
     overflow: hidden; /* Prevents overflow issues */
 }
 
+/* 3. Confetti Animation */
+/* Creates small circle dots falling like confetti. */
+confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    opacity: 0;
+    animation: confetti-fall 5s ease-in-out forwards;
+}
 
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
 
+/* 4. Layout Containers */
 
 
