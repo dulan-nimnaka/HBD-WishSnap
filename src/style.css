@@ -223,3 +223,44 @@ textarea {
     display: none;
 }
 
+/* 8. Button Styles */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.btn:hover {
+    background: #ff5252;
+    box-shadow: 0 7px 15px rgba(255, 107, 107, 0.3);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-generate {
+    background: var(--secondary);
+}
+
+.btn-generate:hover {
+    background: #3dc0b8;
+    box-shadow: 0 7px 15px rgba(78, 205, 196, 0.2);
+}
+
+
+/* 9. Card Preview Styles */
+
+
