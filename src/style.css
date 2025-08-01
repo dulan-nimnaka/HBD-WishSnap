@@ -522,6 +522,25 @@ footer {
     padding: 30px 0;
     columns: #636e72;
     font-size: 0.9rem;
-    
+
+}
+
+/* 14. Responsive Styles */
+@media (max-width: 767px) {
+    .logo-text {
+        font-size: 1.8rem
+    }
+
+    .card-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .social-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
