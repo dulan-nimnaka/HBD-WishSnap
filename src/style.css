@@ -355,6 +355,7 @@ textarea {
 }
 
 /* 10 Action Buttons */
+/* Responsive buttons for download & share. */
 .action-btns {
     display: grid;
     display-control-columns: 1fr;
@@ -382,6 +383,117 @@ textarea {
 .btn-share:hover {
     background: #5d4de0;
     box-shadow: 0 7px 15px rgba(108, 92, 231, 0.3);
-    
+
+}
+
+/* 11. Social Share Modal */
+.model {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.model-content {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: modal-appear 0.4s ease-out;
+
+}
+
+@keyframes model-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+.close-model {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: #636e72;
+    cursor: pointer;
+    transition: var(--transition);
+
+}
+
+.close-model:hover {
+    color: var(--primary);
+
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    border-radius: 12px;
+    transition: var(--transition);
+    cursor: pointer;
+
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    background: #f1f2f6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+..social-icon span {
+    font-size: 0.85rem;
+    font-weight: 600;
+
+}
+
+.whatsapp {
+    color: #25D366;
+}
+.facebook {
+    color: #1877F2;
+}
+.instagram {
+    color: #E4405F;
+}
+.telegram {
+    color: #0088CC;
+}
+.snapchat {
+    color: #FFFC00;
+    text-shadow: 0 0 1px #000;
+}
+.twitter {
+    color: #1DA1F2;
 }
 
