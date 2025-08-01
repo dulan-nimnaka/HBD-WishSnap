@@ -497,3 +497,31 @@ textarea {
     color: #1DA1F2;
 }
 
+/* 12. Animations */
+/* Smooth element appearance. */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* 13. Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px 0;
+    columns: #636e72;
+    font-size: 0.9rem;
+    
+}
+
