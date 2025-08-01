@@ -262,5 +262,94 @@ textarea {
 
 
 /* 9. Card Preview Styles */
+.preview-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
+.card-container {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
 
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+}
+
+.card-header {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 700;
+    text-align: 0 2px 5px rgba(0, 0, o, 0.2);
+    letter-spacing: 1px;
+}
+
+.card-body {
+    padding: 30px;
+
+}
+
+/* **********has to check after implementing the full code********* */
+.card-image {
+    width: 100%;
+    height: 250px;
+    background: #f1f2f6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 25px;
+
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+
+}
+
+.card-image-placeholder {
+    color: #b2bec3;
+    font-size: 4rem;
+
+}
+
+.card-message {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark);
+    font-style: italic;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+}
+
+.card-footer {
+    padding: 20px;
+    text-align: center;
+    background: f8f9fa;
+    font-weight: 600;
+    color: #636e72;
+    font-size: 0.9rem;
+    
+}
