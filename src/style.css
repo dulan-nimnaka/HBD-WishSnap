@@ -351,5 +351,37 @@ textarea {
     font-weight: 600;
     color: #636e72;
     font-size: 0.9rem;
+
+}
+
+/* 10 Action Buttons */
+.action-btns {
+    display: grid;
+    display-control-columns: 1fr;
+    gap: 15px;
+}
+
+@media (min-width: 480px) {
+    .action-btns {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+.btn-download {
+    background: var(--accent);
+
+}
+
+.btn-share:hover {
+    background: #f9b208;
+    box-shadow: 0 7px 15px rgba(255, 190, 11, 0.3);
+
+}
+
+.btn-share:hover {
+    background: #5d4de0;
+    box-shadow: 0 7px 15px rgba(108, 92, 231, 0.3);
     
 }
+
