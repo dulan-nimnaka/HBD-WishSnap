@@ -15,3 +15,18 @@ const fileBtnText = document.getElementById('file-btn-text')
 
 const shareModel = document.querySelector('.share-model');
 const socialIcons = document.querySelectorAll('.social-icons');
+
+// Preview uploaded image
+photoInput.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            previewImage.src = event.target.result;
+            previewImage.style.display = 'block';
+            fileBtnText.textContent = 'photo uploaded';
+
+        }
+        reader.readAsDataURL(file);
+    }
+});
