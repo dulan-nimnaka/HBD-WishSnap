@@ -133,4 +133,5 @@ window.addEventListener('click', function(e) {
     if (e.target === shareModel) {
         shareModel.style.display = 'none';
     }
-})
+});
+
