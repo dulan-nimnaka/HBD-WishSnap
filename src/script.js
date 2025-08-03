@@ -77,5 +77,42 @@ downloadBtn.addEventListener('click', function() {
     downloadBtn.textContent = 'Processing...';
     downloadBtn.disabled = true;
 
+    // Capture at higher resolution for better quality
+    const cardElement = document.quorySelector('.card-container');
+    const scale = 2; // Double the resolution
+
+    // Convert HTML to Image
+    html2canvas(cardElement, {
+        scale: scale,
+        backgroundColor: null, // Transparent background
+        logging: false, // Disable logging for performance
+        userCORS: true // Enable CORS for external images
     
-})
+    }).then(canvas =>{
+        // Convert canvas to data URL
+        const dataURL = canvas.toDataURL('image/png');
+
+        // Create a link to download the image
+        const link = document.createElement('a');
+        link.download = `birthday-card-${nameInput.value.trim() || 'wish'}.png`
+        link.href = dataURL;
+        document.body.appendchild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Restore Button State on Success
+        downloadBtn.textContent = 'Download Card as Image';
+        downloadBtn.disabled = false;
+    
+    // Error Handling
+    }).catch(err => {
+        console.error('Error generating image:', err);
+        alert('Error generating image. Please try again.');
+        downloadBtn.textContent = 'Download Card as Image';
+        downloadBtn.disabled = false;
+
+
+    });
+
+
+});
