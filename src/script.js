@@ -56,4 +56,12 @@ generateBtn.addEventListener('click', function(){
         document.quorySelector('.card-image-placeholder').style.display = 'block';
     }
 
+    // Enable action buttons (download and share)
+    downloadBtn.disabled = false;
+    shareBtn.disabled = false;
+
+    
+
+
+
 })
