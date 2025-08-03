@@ -52,7 +52,8 @@ generateBtn.addEventListener('click', function(){
         document.quertSelector('.card-image-placeholder').style.display = 'none';
 
     } else {
-        
+        cardPhoto.style.display = 'none';
+        document.quorySelector('.card-image-placeholder').style.display = 'block';
     }
 
 })
