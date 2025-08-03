@@ -122,3 +122,8 @@ downloadBtn.addEventListener('click', function() {
 shareBtn.addEventListener('click', function() {
     shareModel.style.display = 'flex';
 });
+
+// Close modal
+closeModel.addEventListener('click', function() {
+    shareModel.style.display = 'none';
+})
