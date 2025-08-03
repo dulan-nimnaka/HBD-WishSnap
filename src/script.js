@@ -70,3 +70,12 @@ generateBtn.addEventListener('click', function(){
     createConfetti();
 
 });
+
+// Download card as image 
+downloadBtn.addEventListener('click', function() {
+    // Disable button during processing
+    downloadBtn.textContent = 'Processing...';
+    downloadBtn.disabled = true;
+
+    
+})
