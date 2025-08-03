@@ -116,3 +116,9 @@ downloadBtn.addEventListener('click', function() {
 
 
 });
+
+
+// Open share modal
+shareBtn.addEventListener('click', function() {
+    shareModel.style.display = 'flex';
+});
