@@ -30,3 +30,29 @@ photoInput.addEventListener('change', function(e) {
         reader.readAsDataURL(file);
     }
 });
+
+// Generate card function
+generateBtn.addEventListener('click', function(){
+    const name = nameInput.value.trim();
+    const message = messageInput.value.trim();
+
+    if (!name || !meessage) {
+        alert('Please enter both name and messages');
+        return;
+    }
+
+    // Update card content
+    document.querySelector('.card-title').textContent = `Happy Birthday, ${name}!`;
+    cardMessage.textContent = message;
+
+    // update card photo if uploaded by user
+    if ( previewImage.src && previewImage.style.display === 'block') {
+        cardPhoto.src = previewImage.src;
+        cardImage.style.display = 'block';
+        document.quertSelector('.card-image-placeholder').style.display = 'none';
+
+    } else {
+        
+    }
+
+})
