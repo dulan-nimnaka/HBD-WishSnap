@@ -127,3 +127,10 @@ shareBtn.addEventListener('click', function() {
 closeModel.addEventListener('click', function() {
     shareModel.style.display = 'none';
 })
+
+// Close modal on outside click
+window.addEventListener('click', function(e) {
+    if (e.target === shareModel) {
+        shareModel.style.display = 'none';
+    }
+})
