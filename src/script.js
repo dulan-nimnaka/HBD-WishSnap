@@ -60,7 +60,13 @@ generateBtn.addEventListener('click', function(){
     downloadBtn.disabled = false;
     shareBtn.disabled = false;
 
-    
+    // Add fade-in animation to the card
+    const cardContainer = document.quorySelector('.card-container');
+    cardContainer.classList.remove('fade-in');
+    void cardContainer.offetWidth; // Trigger reflow
+    cardConatainer.classList.add('fade-in');
+
+
 
 
 
