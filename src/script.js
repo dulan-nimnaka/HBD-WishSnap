@@ -135,5 +135,45 @@ window.addEventListener('click', function(e) {
     }
 });
 
+// Social sharing functionality
+socialIcons.forEach(icon => {
+    icon.addEventListener('click', function() {
+        const platform = this.getAttribute('dtata-platform');
+        const name = nameInput.value.trim() || 'Friend';
+        const message = messsageInput.value.trim() || 'Happy Birthday!';
+        const imageUrl = cardPhoto.src || 'https://via.placeholder.com/400x300?text=Birthday+Card';
 
+        let shareUrl = '';
+        const shareText = `Check out this birhday card I made for ${name} With HBD-WishSnap! ${message}`;
+
+        switch (platform) {
+            case 'whatsapp':
+                shareUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}%0A${imageUrl}`;
+                break;
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(imageUrl)}&quote=${encodeURIComponent(shareText)}`;
+                break;
+            case 'twitter':
+                shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(imageUrl)}`;
+                break;
+            case 'instagram':
+                shareUrl = `https://www.instagram.com/create/story/?media=${encodeURIComponent(imageUrl)}&caption=${encodeURIComponent(shareText)}`;
+                break;
+            case 'telegram':
+                shareUrl = `https://t.me/share/url?url=${encodeURIComponent(imageUrl)}&text=${encodeURIComponent(shareText)}`;
+                break;
+            case 'snapchat':
+                shareUrl = `https://www.snapchat.com/scan?attachmentUrl=${encodeURIComponent(imageUrl)}&text=${encodeURIComponent(shareText)}`;
+                break;
+            default:
+                shareUrl = window.location.href;
+
+        }
+
+        window.open(shareUrl, '_blank', 'width=600, height400, resizable=yes, scrollbars=yes');
+        shareModel.style.display = 'none'; // Close modal after sharing
+
+
+    })
+})
 
