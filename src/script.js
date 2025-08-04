@@ -50,11 +50,11 @@ generateBtn.addEventListener('click', function(){
     if ( previewImage.src && previewImage.style.display === 'block') {
         cardPhoto.src = previewImage.src;
         cardImage.style.display = 'block';
-        document.quertSelector('.card-image-placeholder').style.display = 'none';
+        document.querySelector('.card-image-placeholder').style.display = 'none';
 
     } else {
         cardPhoto.style.display = 'none';
-        document.quorySelector('.card-image-placeholder').style.display = 'block';
+        document.querySelector('.card-image-placeholder').style.display = 'block';
     }
 
     // Enable action buttons (download and share)
@@ -62,7 +62,7 @@ generateBtn.addEventListener('click', function(){
     shareBtn.disabled = false;
 
     // Add fade-in animation to the card
-    const cardContainer = document.quorySelector('.card-container');
+    const cardContainer = document.querySelector('.card-container');
     cardContainer.classList.remove('fade-in');
     void cardContainer.offetWidth; // Trigger reflow
     cardConatainer.classList.add('fade-in');
@@ -79,7 +79,7 @@ downloadBtn.addEventListener('click', function() {
     downloadBtn.disabled = true;
 
     // Capture at higher resolution for better quality
-    const cardElement = document.quorySelector('.card-container');
+    const cardElement = document.querySelector('.card-container');
     const scale = 2; // Double the resolution
 
     // Convert HTML to Image
