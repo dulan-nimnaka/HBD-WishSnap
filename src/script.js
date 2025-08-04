@@ -139,9 +139,9 @@ window.addEventListener('click', function(e) {
 // Social sharing functionality
 socialIcons.forEach(icon => {
     icon.addEventListener('click', function() {
-        const platform = this.getAttribute('dtata-platform');
+        const platform = this.getAttribute('data-platform');
         const name = nameInput.value.trim() || 'Friend';
-        const message = messsageInput.value.trim() || 'Happy Birthday!';
+        const message = messageInput.value.trim() || 'Happy Birthday!';
         const imageUrl = cardPhoto.src || 'https://via.placeholder.com/400x300?text=Birthday+Card';
 
         let shareUrl = '';
