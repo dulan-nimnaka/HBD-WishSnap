@@ -1,7 +1,7 @@
 // src/script.js
 // DOM Elements
 
-const nameInput = doccument.getElementById('name');
+const nameInput = document.getElementById('name');
 const messageInput = document.getElementById('message');
 const photoInput = document.getElementById('photo');
 const previewImage = document.getElementById('preview-image');
