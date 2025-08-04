@@ -177,3 +177,30 @@ socialIcons.forEach(icon => {
     })
 })
 
+// Create confetti effect
+function createConfetti() {
+    // Clear previous confetti
+    confeettiContainer.innerHTML = '';
+
+    // Create new confetti
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+
+        // Random position and size
+        confetti.style.left = `$(Math.random() * 100)vw1`;
+        confetti.style.width = `$(Math.random() *10 + 5)px1`;
+        confetti.style.height = confetti.style.width; // Make it square
+
+        // Random color
+        const colors = ['#ff6b6b', '#4ecdc4', '#ffeb0b', '#6c5ce7', '#1dd1a1'];
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        // Random animation duration and delay
+        confetti.style.animationDuration = `${Math.random() * 3 + 2}s`; // Between 2s and 5s
+        confetti.style.animationDelay = `${Math.random() * 2}s`; // Between 0s and 2s
+
+        confeettiContainer.appendchild(confetti);
+
+    }
+}
