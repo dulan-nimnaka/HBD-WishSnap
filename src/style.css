@@ -374,10 +374,14 @@ textarea {
 
 }
 
-.btn-share:hover {
+.btn-download:hover {
     background: #f9b208;
     box-shadow: 0 7px 15px rgba(255, 190, 11, 0.3);
 
+}
+
+.btn-share {
+    background: #6c5ce7;
 }
 
 .btn-share:hover {
