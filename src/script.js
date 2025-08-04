@@ -13,7 +13,7 @@ const cardMessage = document.getElementById('card-message');
 const confettiContainer = document.getElementById('confetti-container');
 const fileBtnText = document.getElementById('file-btn-text')
 
-const shareModel = document.querySelector('.share-model');
+const shareModal = document.querySelector('.share-modal');
 const socialIcons = document.querySelectorAll('.social-icons');
 
 // Preview uploaded image
@@ -120,18 +120,18 @@ downloadBtn.addEventListener('click', function() {
 
 // Open share modal
 shareBtn.addEventListener('click', function() {
-    shareModel.style.display = 'flex';
+    shareModal.style.display = 'flex';
 });
 
 // Close modal
-closeModel.addEventListener('click', function() {
-    shareModel.style.display = 'none';
+closeModal.addEventListener('click', function() {
+    shareModal.style.display = 'none';
 })
 
 // Close modal on outside click
 window.addEventListener('click', function(e) {
-    if (e.target === shareModel) {
-        shareModel.style.display = 'none';
+    if (e.target === shareModal) {
+        shareModal.style.display = 'none';
     }
 });
 
@@ -171,7 +171,7 @@ socialIcons.forEach(icon => {
         }
 
         window.open(shareUrl, '_blank', 'width=600, height400, resizable=yes, scrollbars=yes');
-        shareModel.style.display = 'none'; // Close modal after sharing
+        shareModal.style.display = 'none'; // Close modal after sharing
 
 
     })
