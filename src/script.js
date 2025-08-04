@@ -189,8 +189,8 @@ function createConfetti() {
         confetti.classList.add('confetti');
 
         // Random position and size
-        confetti.style.left = `$(Math.random() * 100)vw1`;
-        confetti.style.width = `$(Math.random() *10 + 5)px1`;
+        confetti.style.left = `$(Math.random() * 100)vw`;
+        confetti.style.width = `$(Math.random() *10 + 5)px`;
         confetti.style.height = confetti.style.width; // Make it square
 
         // Random color
