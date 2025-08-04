@@ -201,7 +201,7 @@ function createConfetti() {
         confetti.style.animationDuration = `${Math.random() * 3 + 2}s`; // Between 2s and 5s
         confetti.style.animationDelay = `${Math.random() * 2}s`; // Between 0s and 2s
 
-        confeettiContainer.appendchild(confetti);
+        confeettiContainer.appendChild(confetti);
 
     }
 }
