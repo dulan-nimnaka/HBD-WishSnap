@@ -151,7 +151,7 @@ header {
 }
 
 .form-group {
-    max-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 label {
