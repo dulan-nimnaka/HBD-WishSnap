@@ -35,7 +35,7 @@ body {
 
 /* 3. Confetti Animation */
 /* Creates small circle dots falling like confetti. */
-confetti {
+.confetti {
     position: absolute;
     width: 10px;
     height: 10px;
