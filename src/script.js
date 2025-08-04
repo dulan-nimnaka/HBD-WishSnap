@@ -64,7 +64,7 @@ generateBtn.addEventListener('click', function(){
     // Add fade-in animation to the card
     const cardContainer = document.querySelector('.card-container');
     cardContainer.classList.remove('fade-in');
-    void cardContainer.offetWidth; // Trigger reflow
+    void cardContainer.offsetWidth; // Trigger reflow
     cardContainer.classList.add('fade-in');
 
     // create confetti effect
