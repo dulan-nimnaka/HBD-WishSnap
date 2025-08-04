@@ -358,7 +358,7 @@ textarea {
 /* Responsive buttons for download & share. */
 .action-btns {
     display: grid;
-    display-control-columns: 1fr;
+    grid-template-columns: 1fr;
     gap: 15px;
 }
 
