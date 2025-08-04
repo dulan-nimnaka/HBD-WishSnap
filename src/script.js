@@ -11,9 +11,10 @@ const shareBtn = document.getElementById('share-btn');
 const cardPhoto = document.getElementById('card-photo');
 const cardMessage = document.getElementById('card-message');
 const confettiContainer = document.getElementById('confetti-container');
-const fileBtnText = document.getElementById('file-btn-text')
+const fileBtnText = document.getElementById('file-btn-text');
+const shareModal = document.getElementById('share-modal');
 
-const shareModal = document.querySelector('.share-modal');
+const closeModel = document.querySelector('.close-model');
 const socialIcons = document.querySelectorAll('.social-icons');
 
 // Preview uploaded image
@@ -36,7 +37,7 @@ generateBtn.addEventListener('click', function(){
     const name = nameInput.value.trim();
     const message = messageInput.value.trim();
 
-    if (!name || !meessage) {
+    if (!name || !message) {
         alert('Please enter both name and messages');
         return;
     }
