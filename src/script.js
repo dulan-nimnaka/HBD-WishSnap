@@ -149,10 +149,10 @@ socialIcons.forEach(icon => {
 
         switch (platform) {
             case 'whatsapp':
-                shareUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}%0A${imageUrl}`;
+                shareUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}%0A${encodeURIComponent(imageUrl)}`;
                 break;
             case 'facebook':
-                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(imageUrl)}&quote=${encodeURIComponent(shareText)}`;
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(imageUrl)}`;
                 break;
             case 'twitter':
                 shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(imageUrl)}`;
