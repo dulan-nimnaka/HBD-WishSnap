@@ -30,7 +30,7 @@ body {
     min-height: 100vh; /* full screen height */
     padding: 20px;
     position: relative;
-    overflow: hidden; /* Prevents overflow issues */
+    /* overflow: hidden; /* Prevents overflow issues */ 
 }
 
 /* 3. Confetti Animation */
