@@ -304,10 +304,10 @@ textarea {
 
 }
 
-/* **********has to check after implementing the full code********* */
+/* image properly displaying- fixed */
 .card-image {
     width: 100%;
-    height: 250px;
+    height: 100%;
     background: #f1f2f6;
     border-radius: 10px;
     display: flex;
