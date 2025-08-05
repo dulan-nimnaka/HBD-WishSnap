@@ -295,7 +295,7 @@ textarea {
     font-size: 2.2rem;
     color: white;
     font-weight: 700;
-    text-shadow: 0 2px 5px rgba(0, 0, o, 0.2);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
 }
 
@@ -391,7 +391,7 @@ textarea {
 }
 
 /* 11. Social Share Modal */
-.model {
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -405,7 +405,7 @@ textarea {
 
 }
 
-.model-content {
+.modal-content {
     background: white;
     border-radius: 20px;
     padding: 30px;
@@ -416,7 +416,7 @@ textarea {
 
 }
 
-@keyframes model-appear {
+@keyframes modal-appear {
     from {
         opacity: 0;
         transform: translateY(-50px);
@@ -429,7 +429,7 @@ textarea {
     }
 }
 
-.close-model {
+.close-modal {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -440,7 +440,7 @@ textarea {
 
 }
 
-.close-model:hover {
+.close-modal:hover {
     color: var(--primary);
 
 }
@@ -541,6 +541,10 @@ footer {
 
     .section-title {
         font-size: 1.8rem;
+    }
+
+    .section-title::after {
+        background: var(--primary);
     }
 
     .social-icons {
