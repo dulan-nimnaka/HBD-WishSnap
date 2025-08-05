@@ -14,7 +14,7 @@ const confettiContainer = document.getElementById('confetti-container');
 const fileBtnText = document.getElementById('file-btn-text');
 const shareModal = document.getElementById('share-modal');
 
-const closeModel = document.querySelector('.close-model');
+const closeModal = document.querySelector('.close-modal');
 const socialIcons = document.querySelectorAll('.social-icons');
 
 // Preview uploaded image
@@ -49,7 +49,7 @@ generateBtn.addEventListener('click', function(){
     // update card photo if uploaded by user
     if ( previewImage.src && previewImage.style.display === 'block') {
         cardPhoto.src = previewImage.src;
-        cardImage.style.display = 'block';
+        cardPhoto.style.display = 'block';
         document.querySelector('.card-image-placeholder').style.display = 'none';
 
     } else {
@@ -97,7 +97,7 @@ downloadBtn.addEventListener('click', function() {
         const link = document.createElement('a');
         link.download = `birthday-card-${nameInput.value.trim() || 'wish'}.png`
         link.href = dataURL;
-        document.body.appendchild(link);
+        document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
 
@@ -189,8 +189,8 @@ function createConfetti() {
         confetti.classList.add('confetti');
 
         // Random position and size
-        confetti.style.left = `$(Math.random() * 100)vw`;
-        confetti.style.width = `$(Math.random() *10 + 5)px`;
+        confetti.style.left = `${Math.random() * 100}vw`;
+        confetti.style.width = `${Math.random() * 10 + 5}px`;
         confetti.style.height = confetti.style.width; // Make it square
 
         // Random color
