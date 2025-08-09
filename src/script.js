@@ -91,7 +91,7 @@ downloadBtn.addEventListener('click', function() {
     
     }).then(canvas =>{
         // Convert canvas to data URL
-        const dataURL = canvas.toDataURL('image/jpg');
+        const dataURL = canvas.toDataURL('image/png');
 
         // Create a link to download the image
         const link = document.createElement('a');
