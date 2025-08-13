@@ -149,7 +149,7 @@ socialIcons.forEach(icon => {
         let shareUrl = '';
         const shareText = `Check out this birhday card I made for ${name} With HBD-WishSnap! ${message}`;
 
-        switch (platform) {
+        switch(platform) {
             case 'whatsapp':
                 shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
                 break;
@@ -157,20 +157,19 @@ socialIcons.forEach(icon => {
                 shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
                 break;
             case 'twitter':
-                shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(imageUrl)}`;
+                shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
                 break;
             case 'instagram':
-                shareUrl = `https://www.instagram.com/create/story/?media=${encodeURIComponent(imageUrl)}&caption=${encodeURIComponent(shareText)}`;
-                break;
+                alert('For Instagram, save the image and share it directly to your story or feed');
+                return;
             case 'telegram':
-                shareUrl = `https://t.me/share/url?url=${encodeURIComponent(imageUrl)}&text=${encodeURIComponent(shareText)}`;
+                shareUrl = `https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(shareText)}`;
                 break;
             case 'snapchat':
-                shareUrl = `https://www.snapchat.com/scan?attachmentUrl=${encodeURIComponent(imageUrl)}&text=${encodeURIComponent(shareText)}`;
-                break;
+                alert('For Snapchat, save the image and share it directly in the app');
+                return;
             default:
                 shareUrl = window.location.href;
-
         }
 
         window.open(shareUrl, '_blank', 'width=600, height400, resizable=yes, scrollbars=yes');
@@ -183,7 +182,7 @@ socialIcons.forEach(icon => {
 // Create confetti effect
 function createConfetti() {
     // Clear previous confetti
-    confeettiContainer.innerHTML = '';
+    confettiContainer.innerHTML = '';
 
     // Create new confetti
     for (let i = 0; i < 100; i++) {
