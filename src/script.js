@@ -83,11 +83,13 @@ downloadBtn.addEventListener('click', function() {
     const scale = 2; // Double the resolution
 
     // Convert HTML to Image
+
+    const pixelRatio = Math.min(window.devicePixelRatio || 2, 3); // Use device pixel ratio for high DPI screens
     html2canvas(cardElement, {
-        scale: scale,
-        backgroundColor: null, // Transparent background
+        scale: pixelRatio,  // Use device pixel ratio for high DPI screens
+        backgroundColor: '#ffffff', // prevent “dull on dark background”
         logging: false, // Disable logging for performance
-        userCORS: true // Enable CORS for external images
+        useCORS: true // Enable CORS for external images
     
     }).then(canvas =>{
         // Convert canvas to data URL
