@@ -62,7 +62,7 @@ generateBtn.addEventListener('click', function(){
     shareBtn.disabled = false;
 
     // Add fade-in animation to the card
-    const cardContainer = document.querySelector('.card-container');
+    const cardContainer = document.querySelector('cardcontainer');
     cardContainer.classList.remove('fade-in');
     void cardContainer.offsetWidth; // Trigger reflow
     cardContainer.classList.add('fade-in');
@@ -72,6 +72,7 @@ generateBtn.addEventListener('click', function(){
 
 });
 
+/*
 // Download card as image 
 downloadBtn.addEventListener('click', function() {
     // Disable button during processing
@@ -119,6 +120,28 @@ downloadBtn.addEventListener('click', function() {
 
 
 });
+*/
+
+// =========Download card as image 2nd method=========
+function myfunc(){
+    var element = document.getElementById("cardcontainer");
+
+    html2canvas(element).then(function(canvas) {
+        canvas.toBlob(function(blob) {
+            window.saveAs(blob, "download.png");
+        });
+    });
+};
+
+
+
+
+
+
+
+
+
+
 
 
 // Open share modal
