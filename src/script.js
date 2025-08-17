@@ -204,3 +204,6 @@ window.addEventListener('load', function() {
     messageInput.value = "Wishing you a day filled with happiness and a year filled with joy. Happy birthday!";
     setTimeout(() => generateBtn.click(), 500); // Auto-generate card after 500ms
 });
+
+// Update the footer year dynamically
+document.getElementById("year").textContent = new Date().getFullYear();
