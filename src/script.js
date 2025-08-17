@@ -136,10 +136,10 @@ socialIcons.forEach(icon => {
         const name = nameInput.value.trim() || 'Friend';
         const message = messageInput.value.trim() || 'Happy Birthday!';
         const imageUrl = cardPhoto.src || 'https://via.placeholder.com/400x300?text=Birthday+Card';
-
+        
         let shareUrl = '';
-        const shareText = `Check out this birhday card I made for ${name} With HBD-WishSnap! ${message}`;
-
+        const shareText = `Check out this birthday card I made for ${name} with HBD-WishSnap! ${message}`;
+        
         switch(platform) {
             case 'whatsapp':
                 shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
@@ -162,13 +162,11 @@ socialIcons.forEach(icon => {
             default:
                 shareUrl = window.location.href;
         }
-
-        window.open(shareUrl, '_blank', 'width=600, height400, resizable=yes, scrollbars=yes');
-        shareModal.style.display = 'none'; // Close modal after sharing
-
-
-    })
-})
+        
+        window.open(shareUrl, '_blank', 'width=600,height=400,resizable=yes,scrollbars=yes');
+        shareModal.style.display = 'none';
+    });
+});
 
 // Create confetti effect
 function createConfetti() {
