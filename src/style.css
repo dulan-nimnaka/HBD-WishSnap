@@ -357,9 +357,12 @@ textarea {
 /* 10 Action Buttons */
 /* Responsive buttons for download & share. */
 .action-btns {
-    display: grid;
+    display: block;
+    /*
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 15px; */
+
+    width: 100%;
 }
 
 @media (min-width: 480px) {
