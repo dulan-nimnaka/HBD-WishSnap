@@ -7,14 +7,16 @@ const photoInput = document.getElementById('photo');
 const previewImage = document.getElementById('preview-image');
 const generateBtn = document.getElementById('generate-btn');
 const downloadBtn = document.getElementById('download-btn');
-const shareBtn = document.getElementById('share-btn');
 const cardPhoto = document.getElementById('card-photo');
 const cardMessage = document.getElementById('card-message');
 const confettiContainer = document.getElementById('.confetti-container');
 const fileBtnText = document.getElementById('file-btn-text');
-const shareModal = document.getElementById('share-modal');
+
 
 /*
+const shareBtn = document.getElementById('share-btn');
+const shareModal = document.getElementById('share-modal');
+
 const closeModal = document.querySelector('.close-modal');
 const socialIcons = document.querySelectorAll('.social-icon');
 */
