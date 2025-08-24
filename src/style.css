@@ -383,6 +383,7 @@ textarea {
 
 }
 
+/*
 .btn-share {
     background: #6c5ce7;
 }
@@ -392,8 +393,11 @@ textarea {
     box-shadow: 0 7px 15px rgba(108, 92, 231, 0.3);
 
 }
+*/
+
 
 /* 11. Social Share Modal */
+/*
 .modal {
     display: none;
     position: fixed;
@@ -503,6 +507,8 @@ textarea {
 .twitter {
     color: #1DA1F2;
 }
+*/
+
 
 /* 12. Animations */
 /* Smooth element appearance. */
@@ -566,8 +572,11 @@ footer a:hover {
         background: var(--primary);
     }
 
+    /*
     .social-icons {
         grid-template-columns: repeat(2, 1fr);
     }
+    */
 }
+
 
