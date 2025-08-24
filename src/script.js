@@ -10,12 +10,12 @@ const downloadBtn = document.getElementById('download-btn');
 const shareBtn = document.getElementById('share-btn');
 const cardPhoto = document.getElementById('card-photo');
 const cardMessage = document.getElementById('card-message');
-const confettiContainer = document.getElementById('confetti-container');
+const confettiContainer = document.getElementById('.confetti-container');
 const fileBtnText = document.getElementById('file-btn-text');
 const shareModal = document.getElementById('share-modal');
 
 const closeModal = document.querySelector('.close-modal');
-const socialIcons = document.querySelectorAll('.social-icons');
+const socialIcons = document.querySelectorAll('.social-icon');
 
 // Preview uploaded image
 photoInput.addEventListener('change', function(e) {
@@ -191,7 +191,7 @@ function createConfetti() {
         confetti.style.animationDuration = `${Math.random() * 3 + 2}s`; // Between 2s and 5s
         confetti.style.animationDelay = `${Math.random() * 2}s`; // Between 0s and 2s
 
-        confeettiContainer.appendChild(confetti);
+        confettiContainer.appendChild(confetti);
 
     }
 }
