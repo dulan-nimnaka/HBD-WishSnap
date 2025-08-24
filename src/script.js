@@ -14,8 +14,10 @@ const confettiContainer = document.getElementById('.confetti-container');
 const fileBtnText = document.getElementById('file-btn-text');
 const shareModal = document.getElementById('share-modal');
 
+/*
 const closeModal = document.querySelector('.close-modal');
 const socialIcons = document.querySelectorAll('.social-icon');
+*/
 
 // Preview uploaded image
 photoInput.addEventListener('change', function(e) {
@@ -111,7 +113,7 @@ function myfunc(){
 
 
 
-
+/*
 // Open share modal
 shareBtn.addEventListener('click', function() {
     shareModal.style.display = 'flex';
@@ -167,6 +169,7 @@ socialIcons.forEach(icon => {
         shareModal.style.display = 'none';
     });
 });
+*/
 
 // Create confetti effect
 function createConfetti() {
